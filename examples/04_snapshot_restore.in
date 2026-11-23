@@ -1,0 +1,11 @@
+
+ADD_C motor 5 3
+ADD_S temp 4 20 10
+SNAPSHOT initial
+RUN
+STATS
+RESTORE initial
+STATS
+PEEK
+QUIT
+

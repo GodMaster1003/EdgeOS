@@ -1,0 +1,8 @@
+
+ADD_C motor 2 3
+SAVE edgeos_example_state.txt
+RUN
+LOAD edgeos_example_state.txt
+PEEK
+QUIT
+

@@ -1,0 +1,11 @@
+
+ADD_S temp 4 13 10
+ADD_C motor 2 3
+PEEK
+LIST 2
+RUN
+FIND motor
+UNDO
+STATS
+QUIT
+
