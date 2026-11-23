@@ -150,6 +150,8 @@ std::vector<const Task *> Scheduler::list(std::size_t k) const
 
 std::vector<const Task *> Scheduler::ids(const std::string &left, const std::string &right) const
 {
+    if (left > right)
+        return {};
     return id_avl.ranges(left, right);
 }
 

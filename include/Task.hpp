@@ -41,7 +41,7 @@ public:
 
     virtual int finalPriority() const = 0;
 
-    virtual void print(std::ostream& output)const=0;
+    virtual void print(std::ostream &output) const =0;
 
     virtual std::unique_ptr<Task> clone() const = 0;
 
@@ -127,5 +127,6 @@ private:
 
     int _urgency_; // 紧急程度
 };
-std::ostream& operator<<(std::ostream& output,const Task& task);
+
+std::ostream &operator<<(std::ostream &output, const Task &task);
 #endif // SELF_TEST_TASK_HPP

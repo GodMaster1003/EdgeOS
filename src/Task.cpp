@@ -51,7 +51,7 @@ std::unique_ptr<Task> SensorTask::clone() const { return std::unique_ptr<Task>(n
 int ControlTask::urgency() const noexcept { return _urgency_; }
 int ControlTask::finalPriority() const { return basePriority() + 2 * urgency(); }
 
-void ControlTask::print (std::ostream &output) const
+void ControlTask::print(std::ostream &output) const
 {
     std::string basePriority = std::to_string(this->basePriority());
     std::string urgency = std::to_string(this->urgency());
@@ -67,11 +67,12 @@ void ControlTask::print (std::ostream &output) const
 
 std::unique_ptr<Task> ControlTask::clone() const { return std::unique_ptr<Task>(new ControlTask(*this)); }
 
-std::ostream& operator<<(std::ostream& output,const Task& task)
+std::ostream &operator<<(std::ostream &output, const Task &task)
 {
     task.print(output);
     return output;
 }
+
 //
 // Created by shdff on 2026/11/18.
 //
