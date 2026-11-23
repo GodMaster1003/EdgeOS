@@ -1,0 +1,101 @@
+
+---
+Language: Cpp
+BasedOnStyle: LLVM
+
+# ===== 缩进和行宽 =====
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ContinuationIndentWidth: 4
+ColumnLimit: 120
+
+IndentAccessModifiers: false
+AccessModifierOffset: -4
+NamespaceIndentation: None
+IndentCaseLabels: true
+IndentWrappedFunctionNames: true
+
+# ===== 大括号 =====
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel: false
+  AfterClass: false
+  AfterStruct: false
+  AfterUnion: false
+  AfterEnum: false
+  AfterNamespace: false
+  AfterExternBlock: false
+
+  AfterFunction: true
+  AfterControlStatement: Always
+  BeforeLambdaBody: true
+
+  BeforeElse: false
+  BeforeCatch: false
+  BeforeWhile: false
+
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+
+# ===== 简短代码块 =====
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortBlocksOnASingleLine: Empty
+AllowShortLambdasOnASingleLine: Empty
+
+# 简单 case 允许单行，标签保持缩进
+AllowShortCaseLabelsOnASingleLine: true
+
+# ===== 模板与构造函数 =====
+BreakTemplateDeclarations: Yes
+SpaceAfterTemplateKeyword: true
+
+BreakConstructorInitializers: BeforeColon
+PackConstructorInitializers: CurrentLine
+
+# ===== 对齐 =====
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignOperands: Align
+AlignTrailingComments: true
+
+# ===== 空格 =====
+SpaceAfterCStyleCast: true
+SpaceBeforeRangeBasedForLoopColon: true
+
+SpacesInAngles: Never
+SpacesInConditionalStatement: false
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+SpaceInEmptyParentheses: false
+SpaceInEmptyBlock: false
+
+# ===== include 排序 =====
+# 保留已存在的 include 分组与组后的空行，不主动合并
+IncludeBlocks: Preserve
+IncludeCategories:
+  - Regex: '^<.*'
+    Priority: 1
+  - Regex: '^".*'
+    Priority: 2
+  - Regex: '.*'
+    Priority: 3
+
+IncludeIsMainRegex: '([-_](test|unittest))?$'
+
+# ===== 空行规则 =====
+# 自动在相邻函数/类/结构体/枚举定义之间插入一个空行（clang-format 14+）
+SeparateDefinitionBlocks: Always
+
+# 函数声明之间及 #include 区域后的空行需要先手动加入；格式化时会予以保留。
+
+# ===== 其他 =====
+InsertNewlineAtEOF: true
+MaxEmptyLinesToKeep: 1
+
+MacroBlockBegin: ''
+MacroBlockEnd: ''
+...
+
